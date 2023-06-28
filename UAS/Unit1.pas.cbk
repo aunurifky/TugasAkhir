@@ -58,8 +58,6 @@ type
     procedure b4Click(Sender: TObject);
     procedure b5Click(Sender: TObject);
     procedure b6Click(Sender: TObject);
-    procedure bersih;
-    procedure posisiawal;
   private
     { Private declarations }
   public
