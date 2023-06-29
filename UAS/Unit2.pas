@@ -60,6 +60,7 @@ type
 
 var
   Form2: TForm2;
+   id:string;
 
 implementation
 
@@ -126,7 +127,7 @@ begin
    ShowMessage('DATA SUDAH ADA DALAM SISTEM');
   end else
   begin
-
+ zqry1.SQL.Clear;
  zqry1.SQL.Add('insert into wali_kelas values(null, "' + e_1.Text + '", "' +
       FormatDateTime('yyyy-mm-dd', dtp1.Date) + '", "' + e_2.Text + '", "' +
       e_3.Text + '", "' + cbb3.Text + '", "' + e_4.Text + '", "' +
@@ -277,6 +278,6 @@ end;
 
 procedure TForm2.b6Click(Sender: TObject);
 begin
-frxReport1.ShowReport();
+frxrprt1.ShowReport();
 end;
 end.
