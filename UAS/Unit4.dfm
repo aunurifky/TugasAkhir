@@ -1,9 +1,9 @@
-object Form3: TForm3
+object Form4: TForm4
   Left = 192
   Top = 125
   Width = 928
   Height = 480
-  Caption = 'Table user'
+  Caption = 'Form4'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,6 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object I_l2: TLabel
@@ -23,9 +22,9 @@ object Form3: TForm3
   object I_l1: TLabel
     Left = 28
     Top = 12
-    Width = 22
+    Width = 71
     Height = 15
-    Caption = 'NIK'
+    Caption = 'NAMA POIN'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -33,25 +32,12 @@ object Form3: TForm3
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object I_l6: TLabel
-    Left = 20
-    Top = 148
-    Width = 48
-    Height = 16
-    Caption = 'STATUS'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object I_l4: TLabel
     Left = 20
     Top = 100
-    Width = 37
+    Width = 61
     Height = 16
-    Caption = 'LEVEL'
+    Caption = 'TIPE POIN'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -62,9 +48,9 @@ object Form3: TForm3
   object I_l10: TLabel
     Left = 20
     Top = 60
-    Width = 38
+    Width = 46
     Height = 15
-    Caption = 'NAMA'
+    Caption = 'BOBOT'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -84,32 +70,28 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnCellClick = dgSiswadbgrd1CellClick
     Columns = <
       item
         Expanded = False
-        FieldName = 'Id_user'
+        FieldName = 'Id_poin'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Nik'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Nama'
+        FieldName = 'Nama poin'
         Width = 100
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Level'
+        FieldName = 'Bobot'
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Status'
+        FieldName = 'Tipe poin'
+        Width = 100
         Visible = True
       end>
   end
@@ -188,13 +170,6 @@ object Form3: TForm3
     Height = 21
     TabOrder = 9
   end
-  object e_4: TEdit
-    Left = 108
-    Top = 144
-    Width = 205
-    Height = 21
-    TabOrder = 10
-  end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
@@ -213,7 +188,7 @@ object Form3: TForm3
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select *  from user'
+      'SELECT * FROM poin'
       ''
       '')
     Params = <>
@@ -242,7 +217,7 @@ object Form3: TForm3
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45106.515559988420000000
+    ReportOptions.LastChange = 45106.567952708330000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -296,7 +271,6 @@ object Form3: TForm3
         Top = 83.149660000000000000
         Width = 1046.929810000000000000
         object Memo1: TfrxMemoView
-          Left = 370.393940000000000000
           Width = 37.795300000000000000
           Height = 34.015770000000000000
           ShowHint = False
@@ -313,8 +287,8 @@ object Form3: TForm3
           VAlign = vaCenter
         end
         object Memo3: TfrxMemoView
-          Left = 408.189240000000000000
-          Width = 98.267780000000000000
+          Left = 37.795300000000000000
+          Width = 351.496290000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -325,13 +299,13 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            'NIK')
+            'NAMA POIN')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo5: TfrxMemoView
-          Left = 506.457020000000000000
-          Width = 94.488250000000000000
+          Left = 389.291590000000000000
+          Width = 211.653680000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -342,13 +316,13 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            'NAMA')
+            'BOBOT')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo7: TfrxMemoView
           Left = 600.945270000000000000
-          Width = 94.488250000000000000
+          Width = 287.244280000000000000
           Height = 34.015770000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET
@@ -359,24 +333,7 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            'LEVEL')
-          ParentFont = False
-          VAlign = vaCenter
-        end
-        object Memo9: TfrxMemoView
-          Left = 695.433520000000000000
-          Width = 128.504020000000000000
-          Height = 34.015770000000000000
-          ShowHint = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8 = (
-            'STATUS')
+            'TIPE POIN')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -389,11 +346,10 @@ object Form3: TForm3
         DataSetName = 'frxDBDataset'
         RowCount = 0
         object Memo2: TfrxMemoView
-          Left = 370.393940000000000000
           Width = 37.795300000000000000
           Height = 71.811070000000000000
           ShowHint = False
-          DataField = 'Id_user'
+          DataField = 'Id_poin'
           DataSet = frxdbdtst1
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
@@ -404,16 +360,16 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Id_user"]')
+            '[frxDBDataset."Id_poin"]')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo4: TfrxMemoView
-          Left = 408.189240000000000000
-          Width = 98.267780000000000000
+          Left = 37.795300000000000000
+          Width = 351.496290000000000000
           Height = 71.811070000000000000
           ShowHint = False
-          DataField = 'Nik'
+          DataField = 'Nama poin'
           DataSet = frxdbdtst1
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
@@ -424,16 +380,16 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Nik"]')
+            '[frxDBDataset."Nama poin"]')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo8: TfrxMemoView
           Left = 600.945270000000000000
-          Width = 98.267780000000000000
+          Width = 287.244280000000000000
           Height = 71.811070000000000000
           ShowHint = False
-          DataField = 'Level'
+          DataField = 'Tipe poin'
           DataSet = frxdbdtst1
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
@@ -444,36 +400,16 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Level"]')
-          ParentFont = False
-          VAlign = vaCenter
-        end
-        object Memo10: TfrxMemoView
-          Left = 699.213050000000000000
-          Width = 128.504020000000000000
-          Height = 71.811070000000000000
-          ShowHint = False
-          DataField = 'Status'
-          DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8 = (
-            '[frxDBDataset."Status"]')
+            '[frxDBDataset."Tipe poin"]')
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo6: TfrxMemoView
-          Left = 506.457020000000000000
-          Width = 94.488250000000000000
+          Left = 389.291590000000000000
+          Width = 211.653680000000000000
           Height = 71.811070000000000000
           ShowHint = False
-          DataField = 'Nama'
+          DataField = 'Bobot'
           DataSet = frxdbdtst1
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
@@ -484,7 +420,7 @@ object Form3: TForm3
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Nama"]')
+            '[frxDBDataset."Bobot"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -495,7 +431,7 @@ object Form3: TForm3
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from user')
+      'SELECT * FROM poin')
     Params = <>
     Left = 736
     Top = 132
