@@ -26,7 +26,7 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
-    frxdbdtst1: TfrxDBDataset;
+    frxDBDataset4: TfrxDBDataset;
     frxrprt1: TfrxReport;
     zqry2: TZQuery;
     procedure b1Click(Sender: TObject);
@@ -82,7 +82,7 @@ begin
     begin
      ShowMessage('TIPE POIN BELUM DIISI DENGAN BENAR');
     end else
-  if Form2.zqry1.Locate(' Nama_poin', e_1.Text, []) then
+  if Form4.zqry1.Locate(' Nama_poin', e_1.Text, []) then
   begin
    ShowMessage('DATA SUDAH ADA DALAM SISTEM');
   end
@@ -132,7 +132,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from siswa where Id_poin = "' + Id +'"');
+zqry1.SQL.Add(' delete from poin where Id_poin = "' + Id +'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from poin');
@@ -198,8 +198,8 @@ procedure TForm4.dgSiswadbgrd1CellClick(Column: TColumn);
 begin
  id := zqry1.Fields[0].AsString;
   e_1.Text := zqry1.Fields[1].AsString;
-  e_2.Text := zqry1.Fields[3].AsString;
-  e_3.Text := zqry1.Fields[4].AsString;
+  e_2.Text := zqry1.Fields[2].AsString;
+  e_3.Text := zqry1.Fields[3].AsString;
 e_1.Enabled:= True;
 e_2.Enabled:= True;
 e_3.Enabled:= True;

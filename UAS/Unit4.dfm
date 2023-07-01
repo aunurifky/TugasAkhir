@@ -3,7 +3,7 @@ object Form4: TForm4
   Top = 125
   Width = 928
   Height = 480
-  Caption = 'Form4'
+  Caption = 'Tabel Poin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -78,7 +78,7 @@ object Form4: TForm4
       end
       item
         Expanded = False
-        FieldName = 'Nama poin'
+        FieldName = 'Nama_poin'
         Width = 100
         Visible = True
       end
@@ -90,7 +90,7 @@ object Form4: TForm4
       end
       item
         Expanded = False
-        FieldName = 'Tipe poin'
+        FieldName = 'Tipe_poin'
         Width = 100
         Visible = True
       end>
@@ -192,6 +192,8 @@ object Form4: TForm4
       ''
       '')
     Params = <>
+    Properties.Strings = (
+      '')
     Left = 76
     Top = 224
   end
@@ -200,7 +202,7 @@ object Form4: TForm4
     Left = 40
     Top = 220
   end
-  object frxdbdtst1: TfrxDBDataset
+  object frxDBDataset4: TfrxDBDataset
     UserName = 'frxDBDataset'
     CloseDataSource = False
     DataSet = zqry2
@@ -210,6 +212,8 @@ object Form4: TForm4
   end
   object frxrprt1: TfrxReport
     Version = '4.12.6'
+    DataSet = Form2.frxDBDataset1
+    DataSetName = 'frxDBDataset2'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -217,7 +221,7 @@ object Form4: TForm4
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45106.567952708330000000
+    ReportOptions.LastChange = 45106.567952708300000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -227,7 +231,7 @@ object Form4: TForm4
     Top = 76
     Datasets = <
       item
-        DataSet = frxdbdtst1
+        DataSet = frxDBDataset4
         DataSetName = 'frxDBDataset'
       end>
     Variables = <>
@@ -261,7 +265,7 @@ object Form4: TForm4
           Font.Style = [fsBold]
           HAlign = haCenter
           Memo.UTF8 = (
-            'Laporan USER')
+            'Laporan POIN')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -342,7 +346,7 @@ object Form4: TForm4
         Height = 71.811070000000000000
         Top = 177.637910000000000000
         Width = 1046.929810000000000000
-        DataSet = frxdbdtst1
+        DataSet = frxDBDataset4
         DataSetName = 'frxDBDataset'
         RowCount = 0
         object Memo2: TfrxMemoView
@@ -350,7 +354,7 @@ object Form4: TForm4
           Height = 71.811070000000000000
           ShowHint = False
           DataField = 'Id_poin'
-          DataSet = frxdbdtst1
+          DataSet = frxDBDataset4
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -369,8 +373,8 @@ object Form4: TForm4
           Width = 351.496290000000000000
           Height = 71.811070000000000000
           ShowHint = False
-          DataField = 'Nama poin'
-          DataSet = frxdbdtst1
+          DataField = 'Nama_poin'
+          DataSet = frxDBDataset4
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -380,7 +384,7 @@ object Form4: TForm4
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Nama poin"]')
+            '[frxDBDataset."Nama_poin"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -389,8 +393,8 @@ object Form4: TForm4
           Width = 287.244280000000000000
           Height = 71.811070000000000000
           ShowHint = False
-          DataField = 'Tipe poin'
-          DataSet = frxdbdtst1
+          DataField = 'Tipe_poin'
+          DataSet = frxDBDataset4
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -400,7 +404,7 @@ object Form4: TForm4
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset."Tipe poin"]')
+            '[frxDBDataset."Tipe_poin"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -410,7 +414,7 @@ object Form4: TForm4
           Height = 71.811070000000000000
           ShowHint = False
           DataField = 'Bobot'
-          DataSet = frxdbdtst1
+          DataSet = frxDBDataset4
           DataSetName = 'frxDBDataset'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack

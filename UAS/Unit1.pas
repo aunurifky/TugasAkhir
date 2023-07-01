@@ -21,7 +21,7 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
-    frxDBDataset1: TfrxDBDataset;
+    frxDBDataset: TfrxDBDataset;
     frxReport1: TfrxReport;
     zqry2: TZQuery;
     e_1: TEdit;
