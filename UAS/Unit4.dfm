@@ -70,6 +70,7 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dgSiswadbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -212,8 +213,6 @@ object Form4: TForm4
   end
   object frxrprt1: TfrxReport
     Version = '4.12.6'
-    DataSet = Form2.frxDBDataset1
-    DataSetName = 'frxDBDataset2'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]

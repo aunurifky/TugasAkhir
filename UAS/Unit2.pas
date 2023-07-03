@@ -251,10 +251,10 @@ procedure TForm2.dbgrd1CellClick(Column: TColumn);
 begin
 id:= zqry1.Fields[0].AsString;
 e_1.Text := zqry1.Fields[1].AsString;
-e_2.Text := zqry1.Fields[2].AsString;
-e_3.Text := zqry1.Fields[3].AsString;
-e_4.Text := zqry1.Fields[4].AsString;
-cbb1.Text := zqry1.Fields[5].AsString;
+e_2.Text := zqry1.Fields[3].AsString;
+e_3.Text := zqry1.Fields[4].AsString;
+e_4.Text := zqry1.Fields[5].AsString;
+cbb1.Text := zqry1.Fields[2].AsString;
 e_5.Text := zqry1.Fields[6].AsString;
 e_6.Text := zqry1.Fields[7].AsString;
 cbb3.Text := zqry1.Fields[8].AsString;

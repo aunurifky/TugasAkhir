@@ -376,8 +376,6 @@ object Form2: TForm2
   end
   object frxrprt1: TfrxReport
     Version = '4.12.6'
-    DataSet = Form1.frxDBDataset
-    DataSetName = 'frxDBDataset1'#13#10
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]

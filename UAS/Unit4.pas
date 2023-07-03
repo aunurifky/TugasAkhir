@@ -47,7 +47,7 @@ type
 
 var
   Form4: TForm4;
-    id:string;
+    id: string;
 
 implementation
 
@@ -132,7 +132,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from poin where Id_poin = "' + Id +'"');
+zqry1.SQL.Add(' delete from poin where Id_poin = "' + id +'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from poin');
@@ -196,10 +196,10 @@ end;
 
 procedure TForm4.dgSiswadbgrd1CellClick(Column: TColumn);
 begin
- id := zqry1.Fields[0].AsString;
-  e_1.Text := zqry1.Fields[1].AsString;
-  e_2.Text := zqry1.Fields[2].AsString;
-  e_3.Text := zqry1.Fields[3].AsString;
+id := zqry1.Fields[0].AsString;
+e_1.Text := zqry1.Fields[1].AsString;
+e_2.Text := zqry1.Fields[2].AsString;
+e_3.Text := zqry1.Fields[3].AsString;
 e_1.Enabled:= True;
 e_2.Enabled:= True;
 e_3.Enabled:= True;

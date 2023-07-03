@@ -47,6 +47,7 @@ type
 
 var
   Form5: TForm5;
+  id: string;
 
 implementation
 
@@ -118,7 +119,7 @@ zqry1.SQL.Clear;
     zqry1.ExecSQL;
 
 zqry1.SQL.Clear;
-zqry1.SQL.Add('select * from poin');
+zqry1.SQL.Add('select * from kelas');
 zqry1.Open;
 
 posisiawal;
@@ -131,7 +132,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from siswa where Id_kelas = "' + Id +'"');
+zqry1.SQL.Add(' delete from siswa where Id_kelas = "' + id +'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from poin');
@@ -169,7 +170,7 @@ b2.Enabled:= False;
 b3.Enabled:= False;
 b4.Enabled:= False;
 b5.Enabled:= False;
-b6.Enabled:= False;
+b6.Enabled:= True;
 e_1.Enabled:= false;
 e_2.Enabled:= false;
 e_3.Enabled:= false;
@@ -196,10 +197,10 @@ end;
 
 procedure TForm5.dgdbgrd1CellClick(Column: TColumn);
 begin
- id := zqry1.Fields[0].AsString;
-  e_1.Text := zqry1.Fields[1].AsString;
-  e_2.Text := zqry1.Fields[2].AsString;
-  e_3.Text := zqry1.Fields[3].AsString;
+id:= zqry1.Fields[0].AsString;
+e_1.Text := zqry1.Fields[1].AsString;
+e_2.Text := zqry1.Fields[2].AsString;
+e_3.Text := zqry1.Fields[3].AsString;
 e_1.Enabled:= True;
 e_2.Enabled:= True;
 e_3.Enabled:= True;
