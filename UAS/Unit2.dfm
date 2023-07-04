@@ -148,6 +148,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dgSiswadbgrd1CellClick
     Columns = <
       item
         Expanded = False
@@ -376,6 +377,8 @@ object Form2: TForm2
   end
   object frxrprt1: TfrxReport
     Version = '4.12.6'
+    DataSet = Form1.frxDBDataset
+    DataSetName = 'frxDBDataset1'#13#10
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -383,7 +386,7 @@ object Form2: TForm2
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45105.886939386600000000
+    ReportOptions.LastChange = 45109.247323865700000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'

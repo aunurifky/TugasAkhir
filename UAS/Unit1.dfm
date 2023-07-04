@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 247
   Top = 134
-  Width = 928
+  Width = 836
   Height = 480
   Caption = 'Table Siswa'
   Color = clBtnFace
@@ -455,8 +455,6 @@ object Form1: TForm1
   end
   object frxReport1: TfrxReport
     Version = '4.12.6'
-    DataSet = frxDBDataset
-    DataSetName = 'frxDBDataset1'#13#10
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -985,7 +983,6 @@ object Form1: TForm1
   end
   object zqry2: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
       'select * from siswa')
     Params = <>
