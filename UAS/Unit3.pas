@@ -202,7 +202,7 @@ b2.Enabled:=false;
 b3.Enabled:=false;
 b4.Enabled:=false;
 b5.Enabled:=false;
-b6.Enabled:=false;
+b6.Enabled:=True;
 e_1.Enabled:= false;
 e_2.Enabled:= false;
 e_3.Enabled:= false;
@@ -225,6 +225,7 @@ b1.Enabled:= false;
 b2.Enabled:= False;
 b3.Enabled:= True;
 b4.Enabled:= True;
+b5.Enabled:= True;
 end;
 
 

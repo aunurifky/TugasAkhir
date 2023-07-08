@@ -169,7 +169,7 @@ begin
  posisiawal;
 end else
 begin
- ShowMessage('DATA BERHASIL DIUPDATE!');
+ShowMessage('DATA BERHASIL DIUPDATE!');
 zqry1.SQL.Clear;
 zqry1.SQL.Add('Update siswa set Nis= "'+e_1.Text+'",Nisn="'+e_2.Text+'",Nama_Siswa="'+e_3.Text+'",Nik="'+e_4.Text+'" where Id_Siswa="'+Id+'"');
 zqry1. ExecSQL;
